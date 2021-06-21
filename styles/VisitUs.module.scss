@@ -1,0 +1,31 @@
+.body {
+  background-color: rgba(24, 22, 24, 0.787);
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+}
+
+.text {
+  background-color: lightgray;
+  width: fit-content;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.address {
+  margin: 2rem;
+  font-size: 1.2rem;
+}
+
+.hours {
+  margin: 2rem;
+  font-size: 1.2rem;
+}
+
+.hr {
+  border-top: 2px solid black;
+  width: 70%;
+  margin: auto;
+}
