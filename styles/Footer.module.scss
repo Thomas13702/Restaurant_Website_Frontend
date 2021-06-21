@@ -12,3 +12,10 @@
   justify-content: space-around;
   text-align: left;
 }
+
+@media (max-width: 800px) {
+  .body {
+    flex-direction: column;
+    text-align: center;
+  }
+}
