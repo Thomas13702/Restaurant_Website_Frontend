@@ -10,6 +10,7 @@ export default function ThreeImages() {
           src={"/images/food.jpg"}
           width={500}
           height={500}
+          alt="A burger"
         />
         <h2>First Class Dining</h2>
         <p>
@@ -23,6 +24,7 @@ export default function ThreeImages() {
           src={"/images/drinks.jpg"}
           width={500}
           height={500}
+          alt="People drinking cocktails"
         />
         <h2>World Class Drinks</h2>
         <p>
@@ -36,6 +38,7 @@ export default function ThreeImages() {
           src={"/images/bar.jpg"}
           width={500}
           height={500}
+          alt="A bar"
         />
         <h2>Ecstatic Atmosphere</h2>
         <p>
