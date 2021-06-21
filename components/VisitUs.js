@@ -6,7 +6,7 @@ export default function VisitUs() {
       <div className={styles.text}>
         <div className={styles.address}>
           <h1>Visit Us</h1>
-          <h3>19 New Bridge Street, London",EC4V 6DB</h3>
+          <h3>19 New Bridge Street, London, EC4V 6DB</h3>
         </div>
 
         <hr className={styles.hr} />
