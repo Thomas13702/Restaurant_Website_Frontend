@@ -8,10 +8,10 @@ import VisitUs from "@/components/VisitUs";
 export default function Home() {
   return (
     <Layout>
-      <InfoPanel />
-      <SingleImage />
-      <ThreeImages />
-      <VisitUs />
+      <InfoPanel id="info" />
+      <SingleImage id="image" />
+      <ThreeImages id="three" />
+      <VisitUs id="visit" />
     </Layout>
   );
 }

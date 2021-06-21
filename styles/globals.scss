@@ -48,7 +48,7 @@ body {
 
     svg {
       width: 2rem;
-      fill: $clr-gray100;
+      // fill: $clr-gray100;
     }
 
     .close {
@@ -75,7 +75,7 @@ body {
     li {
       list-style: none;
       display: none;
-      color: $clr-gray100;
+      // color: $clr-gray100;
 
       &:first-child {
         margin-right: auto;
@@ -91,7 +91,7 @@ body {
 
     svg {
       width: 2.5rem;
-      fill: $clr-gray100;
+      // fill: $clr-gray100;
     }
   }
 }
@@ -125,4 +125,14 @@ body {
       }
     }
   }
+}
+
+.white {
+  color: white;
+  fill: white;
+}
+
+.black {
+  color: black;
+  fill: black;
 }
