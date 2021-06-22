@@ -92,7 +92,7 @@ export default function Header() {
           </Link>
         </li>
         <li className={colour()}>
-          <Link href="contact">
+          <Link href="/contact">
             <a>Contact</a>
           </Link>
         </li>
