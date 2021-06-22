@@ -34,8 +34,7 @@ body {
 .nav {
   overflow: hidden;
   background-color: rgba(255, 255, 255, 0);
-  //position: absolute; //if want them to stay at top
-  position: fixed; //if want to scroll
+
   left: 0;
   right: 0;
   z-index: 10;
@@ -136,3 +135,14 @@ body {
   color: black;
   fill: black;
 }
+
+.scolled {
+  position: absolute;
+}
+
+.notScrolled {
+  position: fixed;
+}
+
+//position: absolute; //if want them to stay at top
+//position: fixed; //if want to scroll

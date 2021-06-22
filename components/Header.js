@@ -1,7 +1,11 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { debounce } from "../utilities/helpers";
+import { useEffect, useState } from "react";
 
 export default function Header() {
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
   const router = useRouter();
 
   const colour = () => {
@@ -12,8 +16,26 @@ export default function Header() {
     }
   };
 
+  const handleScroll = debounce(() => {
+    const currentScrollPos = window.pageYOffset;
+
+    setVisible(
+      (prevScrollPos > currentScrollPos &&
+        prevScrollPos - currentScrollPos > 70) ||
+        currentScrollPos < 10
+    );
+
+    setPrevScrollPos(currentScrollPos);
+  }, 100);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [prevScrollPos, visible, handleScroll]);
+
   return (
-    <nav className="nav">
+    <nav className={`nav ${visible ? "notScrolled" : "Scrolled"} `}>
       <input type="checkbox" id="nav__checkbox" className="nav__checkbox" />
       <label htmlFor="nav__checkbox" className="nav__toggle">
         <svg
