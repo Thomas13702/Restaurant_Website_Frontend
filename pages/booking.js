@@ -4,6 +4,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useState } from "react";
 import { API_URL } from "@/config/index";
+import { useRouter } from "next/router";
 
 export default function BookingPage() {
   const [values, setValues] = useState({
@@ -16,16 +17,10 @@ export default function BookingPage() {
     comment: "",
   });
 
+  const router = useRouter();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // const hasEmptyFields = Object.values(values).some(
-    //   (element) => element === ""
-    // ); //checks each part of values to see if its empty
-    // //some checks each item in object and will return treu or false whether it passes test (here is whether its equal to "")
-
-    // if (hasEmptyFields) {
-    //   toast.error("Please fill in all fields"); //toastify for error messages
-    // }
 
     const res = await fetch(`${API_URL}/booking`, {
       method: "POST",
@@ -41,9 +36,10 @@ export default function BookingPage() {
 
       toast.error(errors);
     } else {
-      toast.success("All booked");
       const booking = await res.json(); //get data
       console.log(booking);
+      router.push(`/booked`);
+      toast.success("All booked");
     }
   };
 
